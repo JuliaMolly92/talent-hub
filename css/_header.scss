@@ -1,0 +1,188 @@
+header {
+   background-color: $white;
+
+    nav {
+        position: relative;
+        padding: 1.25rem 1.875rem;
+        grid-template-columns: 1fr 1fr;
+        font-size: $small;
+        z-index: 1;
+
+    @include breakpoint-up (large) {
+        grid-template-columns: 1fr 7fr 2fr;
+    }
+
+    .logo > img {
+        display: block;
+    }
+    
+    .hamburger {
+        
+        .hamburger-line {
+            display: block;
+            width: 39px;
+            height: 5px;
+            background-color: $gray;
+    
+            &:not(:last-child) {
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        &.open {
+            .hamburger-line:first-child {
+                transform: rotate(45deg);
+                transform-origin: left top;
+                transition: transform 200ms ease-in-out;
+            } 
+            .hamburger-line:nth-child(2) {
+                opacity: 0;
+                transition: opacity 200ms ease-in-out;
+            }
+            .hamburger-line:last-child {
+                transform: rotate(-45deg);
+                transform-origin: left bottom;
+                transition: transform 200ms ease-in-out;
+            }
+        }
+
+        &.close {
+            .hamburger-line:first-child {
+                transform: rotate(0deg);
+                transform-origin: left top;
+                transition: transform 200ms ease-in-out;
+            } 
+            .hamburger-line:nth-child(2) {
+                opacity: 1;
+                transition: opacity 100ms ease-in-out;
+                transition-delay: 100ms;
+            }
+            .hamburger-line:last-child {
+                transform: rotate(0deg);
+                transform-origin: left bottom;
+                transition: transform 200ms ease-in-out;
+            }
+        }
+    }
+
+    .hamburger-menu {
+        visibility: hidden;
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: -20rem;
+        left: 0;
+        padding: 1.25rem 1.875rem;
+        background-color: $white;
+        z-index: -1;
+
+        li{
+            display: block;
+            text-align: center;
+            padding-bottom: 1rem;
+        }
+
+        &.fade-menu-in {
+            animation: fadeIn 1s forwards;
+        }
+        &.fade-menu-out {
+            animation: fadeOut 1s ease-in-out forwards;
+        }
+    }
+
+    @keyframes fadeIn {
+        0% {
+            visibility: hidden;
+            top: -20rem;
+        }
+        100% {
+            visibility: visible;
+            top: 5rem;
+        }
+    }
+
+    @keyframes fadeOut {
+        0% {
+            visibility: visible;
+            top: 5rem;
+        }
+        100% {
+            visibility: hidden;
+            top: -20rem;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+
+        li {
+            display: inline-block;
+        }
+
+        &.menu :not(:last-child) {
+            padding-right: 1.5rem;
+        }
+
+        &.social-media {
+            height: 20px;
+
+            img {
+                display: block;
+            }
+
+            :not(:first-child) {
+                padding-left: 0.625rem;
+            }
+        }
+    }
+
+    .dropdown {
+        position: relative;
+
+        &:after {
+            content: '\276F';
+            position: absolute;
+            display: inline-block;
+            transform: rotate(90deg);
+            right: 1.875rem;
+            color: $gray;
+        }
+        
+        .dropdown-list {
+            display: none;
+            width: 9.375rem;
+            position: absolute;
+            padding: 1rem 0 1rem 1rem; 
+            background-color: $white;
+            color: $gray;
+
+            &:before {
+                content: '';
+                width: 100%;
+                height: 2px;
+                left: 0rem;
+                position: absolute;
+                background-color: $blue;
+                background: linear-gradient(to right, $blue, $green);
+            }
+
+            > li {
+                padding-top: 1rem;
+            }
+        }
+
+        &:hover {
+            .dropdown-list {
+                display: block;
+            }
+        }
+
+        li:hover {
+            color: $black;
+            font-weight: 400;
+        }
+    }
+
+    }
+
+}

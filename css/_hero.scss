@@ -1,0 +1,38 @@
+main {
+    .hero {
+        position: relative;
+    }
+
+    .hero-image  {
+        max-height: 25rem;
+        overflow: hidden;
+
+        @include breakpoint-up(large) {
+            max-height: 42.5rem;
+        }
+
+        img {
+            width: 100vw;
+            max-width: 1440px;
+            height: auto;
+            display: block;
+        }
+    }
+
+    .hero-headline {
+        position: absolute;
+        background-color: $white-transparent;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+        padding: 1.25rem;
+        box-shadow: -2px 3px 3px rgb(159, 159, 159);
+
+        @include breakpoint-up (large) {
+            top: 0;
+            left: 1.875rem;
+            transform: translate(0, 0);
+            padding: 14.375rem 1.875rem 3.125rem 1.875rem;
+        }
+    }
+}

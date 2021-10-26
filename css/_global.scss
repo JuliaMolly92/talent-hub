@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    margin: 0 auto;
+    font-family: $font;
+    font-size: $medium;
+    color: $black;
+    font-weight: 200;
+
+    p {
+        line-height: 1.25rem;
+
+        &.text-center {
+            text-align: center;
+        }
+    }
+}
+
+h1, h2, h3 {
+    font-family: $exo;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 1.3125rem;
+    color: $blue;
+    font-style: italic;
+
+    @include breakpoint-up (medium) {
+        font-size: 2.8125rem;
+    }
+}
+
+a, a:hover, a:focus {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.grid {
+    display: grid;
+}
+
+.flex {
+    display: flex;
+
+    &-jc-sb {
+        justify-content: space-between;
+    }
+
+    &-js-end {
+        justify-self: end;
+    }
+
+    &-ai-c {
+        align-items: center;
+    }
+}
+
+.hide-mob {
+    @include breakpoint-down(medium) {
+        display: none;
+    }
+}
+
+.hide-desktop {
+    @include breakpoint-up(large) {
+        display: none;
+    }
+}
+
+.section-padding {
+    padding: 3.125rem 1.25rem; // 50px 20px
+
+    @include breakpoint-up(medium) {
+        padding: 4.375rem 9vw;
+    }
+    
+}
