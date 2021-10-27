@@ -34,7 +34,7 @@ h1 {
   font-style: italic;
 }
 
-@media (min-width: 48.0625em) {
+@media (min-width: 64.0625em) {
   h1 {
     font-size: 2.8125rem;
   }
@@ -44,6 +44,11 @@ a, a:hover, a:focus {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
+}
+
+.content-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .grid {
@@ -92,7 +97,7 @@ a, a:hover, a:focus {
 
 @media (min-width: 48.0625em) {
   .section-padding {
-    padding: 4.375rem 9vw;
+    padding: 4.375rem 1.875rem;
   }
 }
 
@@ -332,7 +337,7 @@ header nav .dropdown li:hover {
   font-weight: 400;
 }
 
-main .hero {
+main .hero-section {
   position: relative;
 }
 
@@ -343,35 +348,45 @@ main .hero-image {
 
 @media (min-width: 64.0625em) {
   main .hero-image {
-    max-height: 42.5rem;
+    max-height: 62.5rem;
   }
 }
 
 main .hero-image img {
   width: 100vw;
-  max-width: 1440px;
   height: auto;
   display: block;
 }
 
-main .hero-headline {
+main .hero-wrapper {
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.8);
+  width: 100%;
   top: 50%;
   left: 0;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
+}
+
+@media (min-width: 64.0625em) {
+  main .hero-wrapper {
+    top: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+}
+
+main .hero-wrapper .hero-headline {
+  width: 16rem;
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 1.25rem;
   -webkit-box-shadow: -2px 3px 3px #9f9f9f;
           box-shadow: -2px 3px 3px #9f9f9f;
 }
 
 @media (min-width: 64.0625em) {
-  main .hero-headline {
-    top: 0;
-    left: 1.875rem;
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+  main .hero-wrapper .hero-headline {
+    width: 40rem;
     padding: 14.375rem 1.875rem 3.125rem 1.875rem;
   }
 }

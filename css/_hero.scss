@@ -1,5 +1,5 @@
 main {
-    .hero {
+    .hero-section {
         position: relative;
     }
 
@@ -8,31 +8,39 @@ main {
         overflow: hidden;
 
         @include breakpoint-up(large) {
-            max-height: 42.5rem;
+            max-height: 62.5rem;
         }
 
         img {
             width: 100vw;
-            max-width: 1440px;
             height: auto;
             display: block;
         }
     }
 
-    .hero-headline {
+    .hero-wrapper {
         position: absolute;
-        background-color: $white-transparent;
+        width: 100%;
         top: 50%;
         left: 0;
         transform: translate(0, -50%);
-        padding: 1.25rem;
-        box-shadow: -2px 3px 3px rgb(159, 159, 159);
 
         @include breakpoint-up (large) {
             top: 0;
-            left: 1.875rem;
-            transform: translate(0, 0);
-            padding: 14.375rem 1.875rem 3.125rem 1.875rem;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+
+        .hero-headline {
+            width: 16rem;
+            background-color: $white-transparent;
+            padding: 1.25rem;
+            box-shadow: -2px 3px 3px rgb(159, 159, 159);
+    
+            @include breakpoint-up (large) {
+                width: 40rem;
+                padding: 14.375rem 1.875rem 3.125rem 1.875rem;
+            }
         }
     }
 }
