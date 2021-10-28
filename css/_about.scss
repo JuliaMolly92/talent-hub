@@ -1,0 +1,17 @@
+.stats-wrapper {
+    display: block;
+    margin-top: 3.125rem;
+
+    img {
+        display: block;
+        margin: 1.875rem auto;
+    }
+
+    @include breakpoint-up(medium) {
+        display: flex;
+
+        img {
+            margin: 0;
+        }
+    }
+}

@@ -35,10 +35,12 @@ main {
             width: 16rem;
             background-color: $white-transparent;
             padding: 1.25rem;
+            margin-left: 0;
             box-shadow: -2px 3px 3px rgb(159, 159, 159);
     
             @include breakpoint-up (large) {
-                width: 40rem;
+                width: 31.875rem;
+                margin-left: 10%;
                 padding: 14.375rem 1.875rem 3.125rem 1.875rem;
             }
         }
