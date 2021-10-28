@@ -108,16 +108,16 @@ header {
 header nav {
   position: relative;
   padding: 1.25rem 1.875rem;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
   font-size: 0.875rem;
   z-index: 1;
 }
 
 @media (min-width: 64.0625em) {
   header nav {
-    -ms-grid-columns: 1fr 7fr 2fr;
-        grid-template-columns: 1fr 7fr 2fr;
+    -ms-grid-columns: 10% 70% 20%;
+        grid-template-columns: 10% 70% 20%;
   }
 }
 
@@ -380,14 +380,37 @@ main .hero-wrapper .hero-headline {
   width: 16rem;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 1.25rem;
+  margin-left: 0;
   -webkit-box-shadow: -2px 3px 3px #9f9f9f;
           box-shadow: -2px 3px 3px #9f9f9f;
 }
 
 @media (min-width: 64.0625em) {
   main .hero-wrapper .hero-headline {
-    width: 40rem;
+    width: 31.875rem;
+    margin-left: 10%;
     padding: 14.375rem 1.875rem 3.125rem 1.875rem;
+  }
+}
+
+.stats-wrapper {
+  display: block;
+  margin-top: 3.125rem;
+}
+
+.stats-wrapper img {
+  display: block;
+  margin: 1.875rem auto;
+}
+
+@media (min-width: 48.0625em) {
+  .stats-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .stats-wrapper img {
+    margin: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

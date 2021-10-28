@@ -4,12 +4,12 @@ header {
     nav {
         position: relative;
         padding: 1.25rem 1.875rem;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 50% 50%;
         font-size: $small;
         z-index: 1;
 
     @include breakpoint-up (large) {
-        grid-template-columns: 1fr 7fr 2fr;
+        grid-template-columns: 10% 70% 20%;
     }
 
     .logo > img {
