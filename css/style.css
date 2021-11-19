@@ -19,8 +19,16 @@ body p {
   line-height: 1.25rem;
 }
 
-body p.text-center {
+body .text-center {
   text-align: center;
+}
+
+body .align-left {
+  text-align: left;
+}
+
+body .align-right {
+  text-align: right;
 }
 
 h1, h2, h3 {
@@ -99,6 +107,10 @@ a, a:hover, a:focus {
   .section-padding {
     padding: 4.375rem 1.875rem;
   }
+}
+
+.wrapper-blue {
+  background-color: #262f44;
 }
 
 header {
@@ -274,6 +286,10 @@ header nav ul li {
   display: inline-block;
 }
 
+header nav ul li:hover {
+  font-style: italic;
+}
+
 header nav ul.menu :not(:last-child) {
   padding-right: 1.5rem;
 }
@@ -396,21 +412,70 @@ main .hero-wrapper .hero-headline {
 .stats-wrapper {
   display: block;
   margin-top: 3.125rem;
+  font-family: "Exo", sans-serif;
+  font-style: italic;
 }
 
-.stats-wrapper img {
-  display: block;
+.stats-wrapper .stats-circle {
+  position: relative;
+  display: table;
+  width: 14.625rem;
+  height: 14.625rem;
+  background-color: white;
+  border-radius: 50%;
   margin: 1.875rem auto;
 }
 
-@media (min-width: 48.0625em) {
+.stats-wrapper .stats-circle:after {
+  position: absolute;
+  content: '';
+  inset: -3px;
+  border-radius: 50%;
+  background: -webkit-gradient(linear, right top, left top, from(#08b3e5), to(#2af598));
+  background: linear-gradient(to left, #08b3e5, #2af598);
+  z-index: -1;
+}
+
+.stats-wrapper .stats-circle p {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 2rem;
+  line-height: 2.8125rem;
+}
+
+.stats-wrapper .stats-circle span {
+  font-size: 2.8125rem;
+  font-weight: 400;
+}
+
+@media (min-width: 64.0625em) {
   .stats-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .stats-wrapper img {
-    margin: 0;
+}
+
+.expertise-wrapper {
+  -ms-grid-columns: 30% 70%;
+      grid-template-columns: 30% 70%;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+}
+
+.expertise-wrapper:not(:last-of-type) {
+  padding-bottom: 1.25rem;
+}
+
+.expertise-wrapper p:last-of-type {
+  padding-left: 1.25rem;
+}
+
+@media (min-width: 64.0625em) {
+  .expertise-wrapper {
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
   }
 }
 /*# sourceMappingURL=style.css.map */

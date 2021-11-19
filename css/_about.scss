@@ -1,17 +1,40 @@
 .stats-wrapper {
     display: block;
     margin-top: 3.125rem;
+    font-family: $exo;
+    font-style: italic;
 
-    img {
-        display: block;
+    .stats-circle {
+        position: relative;
+        display: table;
+        width: 14.625rem;
+        height: 14.625rem;
+        background-color: $white;
+        border-radius: 50%;
         margin: 1.875rem auto;
+
+        &:after {
+            position: absolute;
+            content: '';
+            inset: -3px;
+            border-radius: 50%;
+            background: $gradient;
+            z-index: -1;
+        }
+
+        p {
+            display: table-cell;
+            vertical-align: middle;
+            font-size: $large;
+            line-height: $xlarge;
+        }
+        span {
+            font-size: $xlarge;
+            font-weight: 400;
+        }
     }
 
-    @include breakpoint-up(medium) {
+    @include breakpoint-up (large) {
         display: flex;
-
-        img {
-            margin: 0;
-        }
     }
 }

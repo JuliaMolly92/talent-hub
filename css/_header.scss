@@ -119,6 +119,10 @@ header {
             display: inline-block;
         }
 
+        li:hover {
+            font-style: italic;
+        }
+
         &.menu :not(:last-child) {
             padding-right: 1.5rem;
         }

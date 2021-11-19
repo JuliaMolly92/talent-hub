@@ -14,10 +14,16 @@ body {
 
     p {
         line-height: 1.25rem;
+    }
 
-        &.text-center {
-            text-align: center;
-        }
+    .text-center {
+        text-align: center;
+    }
+    .align-left {
+        text-align: left;
+    }
+    .align-right {
+        text-align: right;
     }
 }
 
@@ -86,4 +92,8 @@ a, a:hover, a:focus {
         padding: 4.375rem 1.875rem;
     }
     
+}
+
+.wrapper-blue {
+    background-color: $dark-blue;
 }
