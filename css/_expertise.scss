@@ -8,11 +8,20 @@
         padding-bottom: 1.25rem;
     } 
 
+    p:first-of-type {
+        font-weight: 400;
+    }
+
     p:last-of-type {
         padding-left: 1.25rem;
     }
 
     @include breakpoint-up (large) {
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 20% 80%;
+
+        p:last-of-type {
+            padding-left: 6.25rem;
+        }
+
     }
 }

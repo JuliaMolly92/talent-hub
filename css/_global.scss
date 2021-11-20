@@ -89,7 +89,7 @@ a, a:hover, a:focus {
     padding: 3.125rem 1.25rem; // 50px 20px
 
     @include breakpoint-up(medium) {
-        padding: 4.375rem 1.875rem;
+        padding: 4.375rem 3.125rem;
     }
     
 }

@@ -1,0 +1,15 @@
+.services-wrapper {
+    grid-template-columns: 45% 45%;
+    grid-column-gap: 10%;
+    grid-row-gap: 3.125rem;
+
+    @include breakpoint-up (large) {
+        grid-template-columns: 20% 20% 20% 20%;
+        grid-column-gap: 6%;
+    }
+
+    .service-header {
+        padding: 1.875rem 0;
+        font-weight: 400;
+    }
+}

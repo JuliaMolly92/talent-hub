@@ -105,7 +105,7 @@ a, a:hover, a:focus {
 
 @media (min-width: 48.0625em) {
   .section-padding {
-    padding: 4.375rem 1.875rem;
+    padding: 4.375rem 3.125rem;
   }
 }
 
@@ -468,14 +468,41 @@ main .hero-wrapper .hero-headline {
   padding-bottom: 1.25rem;
 }
 
+.expertise-wrapper p:first-of-type {
+  font-weight: 400;
+}
+
 .expertise-wrapper p:last-of-type {
   padding-left: 1.25rem;
 }
 
 @media (min-width: 64.0625em) {
   .expertise-wrapper {
-    -ms-grid-columns: 50% 50%;
-        grid-template-columns: 50% 50%;
+    -ms-grid-columns: 20% 80%;
+        grid-template-columns: 20% 80%;
   }
+  .expertise-wrapper p:last-of-type {
+    padding-left: 6.25rem;
+  }
+}
+
+.services-wrapper {
+  -ms-grid-columns: 45% 45%;
+      grid-template-columns: 45% 45%;
+  grid-column-gap: 10%;
+  grid-row-gap: 3.125rem;
+}
+
+@media (min-width: 64.0625em) {
+  .services-wrapper {
+    -ms-grid-columns: 20% 20% 20% 20%;
+        grid-template-columns: 20% 20% 20% 20%;
+    grid-column-gap: 6%;
+  }
+}
+
+.services-wrapper .service-header {
+  padding: 1.875rem 0;
+  font-weight: 400;
 }
 /*# sourceMappingURL=style.css.map */
