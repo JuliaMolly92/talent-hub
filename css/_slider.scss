@@ -1,0 +1,109 @@
+.slider-wrapper {
+    position: relative;
+
+    .slider {
+        .slider-img {
+            width: 100%;
+            height: 360px;
+            background-size: cover;
+            background-position: top center;
+            background-repeat: no-repeat;
+
+            &.slider-img-1 {
+                background-image: url('/assets/slide-mob-1.jpg');
+            }
+            &.slider-img-2 {
+                background-image: url('/assets/slide-mob-2.jpg');
+            }
+            &.slider-img-3 {
+                background-image: url('/assets/slide-mob-3.jpg');
+            }
+            &.slider-img-4 {
+                background-image: url('/assets/slide-mob-4.jpg');
+            }
+            &.slider-img-5 {
+                background-image: url('/assets/slide-mob-5.jpg');
+            }
+            &.slider-img-6 {
+                background-image: url('/assets/slide-mob-6.jpg');
+            }
+            &.slider-img-7 {
+                background-image: url('/assets/slide-mob-7.jpg');
+            }
+
+            @include breakpoint-up(medium) {
+                height: 500px;
+
+                .slider-img-1 {
+                    background-image: url('/assets/slide-desk-1.jpg');
+                }
+                .slider-img-2 {
+                    background-image: url('/assets/slide-desk-2.jpg');
+                }
+                .slider-img-3 {
+                    background-image: url('/assets/slide-desk-3.jpg');
+                }
+                .slider-img-4 {
+                    background-image: url('/assets/slide-desk-4.jpg');
+                }
+                .slider-img-5 {
+                    background-image: url('/assets/slide-desk-5.jpg');
+                }
+                .slider-img-6 {
+                    background-image: url('/assets/slide-desk-6.jpg');
+                }
+                .slider-img-7 {
+                    background-image: url('/assets/slide-desk-7.jpg');
+                }
+                
+            }
+        }
+    }
+
+    .slider-next {
+        position: absolute;
+        top: 0;
+        left: 100%;
+    }
+
+    .slider-prev {
+        position: absolute;
+        top: 0;
+        right: 100%;
+    }
+
+    .slider-bar {
+        position: relative;
+        width: 100%;
+        height: 0.5rem;
+        background-color: $green;
+    }
+
+    .slider-bar-selector{
+        position: absolute;
+        width: calc(100% / 7);
+        height: 0.5rem;
+        bottom: 0;
+        left: 0;
+        background-color: $blue;
+    }
+
+    .slider-button {
+        position: absolute;
+        top: calc(50% - 20px);
+        opacity: 0.6;
+
+        &:hover {
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        &.slider-button-prev {
+            left: 20px;
+        }
+
+        &.slider-button-next {
+            right: 20px;
+        }
+    }
+}
